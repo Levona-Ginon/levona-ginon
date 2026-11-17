@@ -588,10 +588,30 @@
         }
 
         .carousel-slide img {
+            position: relative;
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+
+        /* Active slide: show the whole photo (portrait or landscape) over a blurred copy of itself */
+        .carousel-slide .slide-bg {
+            position: absolute;
+            inset: -30px;
+            background-size: cover;
+            background-position: center;
+            filter: blur(22px) brightness(0.75);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .carousel-slide.active .slide-bg {
+            opacity: 1;
+        }
+
+        .carousel-slide.active img {
+            object-fit: contain;
         }
 
         .carousel-slide.active {
@@ -2259,6 +2279,7 @@
                     const encodedImg = encodeURI(img).replace(/'/g, "%27");
                     const stateClass = iIdx === 0 ? 'active' : (iIdx === 1 ? 'next' : (iIdx === project.images.length - 1 ? 'prev' : 'hidden'));
                     html += '<div class="carousel-slide ' + stateClass + '" data-index="' + iIdx + '">';
+                    html += '<div class="slide-bg" style="background-image:url(\'' + encodedImg + '\')"></div>';
                     html += '<img src="' + encodedImg + '" alt="' + project.name + '" loading="lazy" onclick="openLightbox(\'' + encodedImg + '\')" onerror="this.parentElement.style.display=\'none\'">';
                     html += '</div>';
                 });
