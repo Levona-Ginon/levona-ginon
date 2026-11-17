@@ -894,6 +894,55 @@
             align-items: center;
         }
 
+        .clients-marquees {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .clients-marquee {
+            display: flex;
+            gap: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 20px;
+            flex-shrink: 0;
+            min-width: 100%;
+            animation: clients-scroll 50s linear infinite;
+        }
+
+        .clients-marquee.reverse .clients-track {
+            animation-direction: reverse;
+        }
+
+        .clients-marquee:hover .clients-track {
+            animation-play-state: paused;
+        }
+
+        .clients-track .client-logo {
+            width: 180px;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes clients-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(100% + 20px)); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .clients-track { animation: none; }
+        }
+
+        @media (max-width: 768px) {
+            .clients-track .client-logo { width: 140px; height: 80px; }
+        }
+
         .client-logo {
             background: var(--white);
             padding: 20px;
@@ -913,7 +962,7 @@
 
         .client-logo img {
             max-width: 100%;
-            max-height: 60px;
+            max-height: 52px;
             object-fit: contain;
             filter: grayscale(100%);
             opacity: 0.7;
@@ -1795,17 +1844,15 @@
             <p data-he="גאים לעבוד עם החברות המובילות בישראל" data-en="Proud to work with Israel's leading companies">גאים לעבוד עם החברות המובילות בישראל</p>
             <div class="line"></div>
         </div>
-        <div class="clients-grid fade-in">
-            <div class="client-logo"><img src="Logo/Amazon.avif" alt="Amazon"></div>
-            <div class="client-logo"><img src="Logo/Argus.avif" alt="Argus"></div>
-            <div class="client-logo"><img src="Logo/Hubz.avif" alt="Hubz"></div>
-            <div class="client-logo"><img src="Logo/LABS.avif" alt="Labs"></div>
-            <div class="client-logo"><img src="Logo/Natam.avif" alt="Natam"></div>
-            <div class="client-logo"><img src="Logo/Nayax.avif" alt="Nayax"></div>
-            <div class="client-logo"><img src="Logo/Saban.avif" alt="Saban"></div>
-            <div class="client-logo"><img src="Logo/Samsung.avif" alt="Samsung"></div>
-            <div class="client-logo"><img src="Logo/Symantec.avif" alt="Symantec"></div>
-            <div class="client-logo"><img src="Logo/Tshuva.avif" alt="Tshuva"></div>
+        <div class="clients-marquees fade-in">
+            <div class="clients-marquee">
+                <div class="clients-track"><div class="client-logo"><img src="Logo/Amazon.avif" alt="Amazon"></div><div class="client-logo"><img src="Logo/Unity.webp" alt="Unity"></div><div class="client-logo"><img src="Logo/Similarweb.webp" alt="Similarweb"></div><div class="client-logo"><img src="Logo/Atid.webp" alt="עתיד"></div><div class="client-logo"><img src="Logo/HiBob.webp" alt="HiBob"></div><div class="client-logo"><img src="Logo/IBI.webp" alt="IBI"></div><div class="client-logo"><img src="Logo/Nayax.avif" alt="Nayax"></div><div class="client-logo"><img src="Logo/Snyk.webp" alt="Snyk"></div><div class="client-logo"><img src="Logo/PhoenixExcellence.webp" alt="הפניקס אקסלנס"></div><div class="client-logo"><img src="Logo/Oddity.webp" alt="Oddity"></div><div class="client-logo"><img src="Logo/Symantec.avif" alt="Symantec"></div><div class="client-logo"><img src="Logo/Turpaz.webp" alt="תורפז"></div><div class="client-logo"><img src="Logo/TeraSky.webp" alt="TeraSky"></div><div class="client-logo"><img src="Logo/HelloHeart.webp" alt="Hello Heart"></div></div>
+                <div class="clients-track" aria-hidden="true"><div class="client-logo"><img src="Logo/Amazon.avif" alt=""></div><div class="client-logo"><img src="Logo/Unity.webp" alt=""></div><div class="client-logo"><img src="Logo/Similarweb.webp" alt=""></div><div class="client-logo"><img src="Logo/Atid.webp" alt=""></div><div class="client-logo"><img src="Logo/HiBob.webp" alt=""></div><div class="client-logo"><img src="Logo/IBI.webp" alt=""></div><div class="client-logo"><img src="Logo/Nayax.avif" alt=""></div><div class="client-logo"><img src="Logo/Snyk.webp" alt=""></div><div class="client-logo"><img src="Logo/PhoenixExcellence.webp" alt=""></div><div class="client-logo"><img src="Logo/Oddity.webp" alt=""></div><div class="client-logo"><img src="Logo/Symantec.avif" alt=""></div><div class="client-logo"><img src="Logo/Turpaz.webp" alt=""></div><div class="client-logo"><img src="Logo/TeraSky.webp" alt=""></div><div class="client-logo"><img src="Logo/HelloHeart.webp" alt=""></div></div>
+            </div>
+            <div class="clients-marquee reverse">
+                <div class="clients-track"><div class="client-logo"><img src="Logo/Tshuva.avif" alt="Tshuva"></div><div class="client-logo"><img src="Logo/Aman.webp" alt="Aman"></div><div class="client-logo"><img src="Logo/PlayPerfect.webp" alt="Play Perfect"></div><div class="client-logo"><img src="Logo/Peilim.webp" alt="פעילים"></div><div class="client-logo"><img src="Logo/Voyage81.webp" alt="Voyage81"></div><div class="client-logo"><img src="Logo/Shekel.webp" alt="שקל"></div><div class="client-logo"><img src="Logo/LABS.avif" alt="Labs"></div><div class="client-logo"><img src="Logo/ZeclerArgov.webp" alt="Zecler Argov"></div><div class="client-logo"><img src="Logo/One1.webp" alt="One1"></div><div class="client-logo"><img src="Logo/Margolin.webp" alt="אחים מרגולין"></div><div class="client-logo"><img src="Logo/Dalia.webp" alt="דליה אנרגיות"></div><div class="client-logo"><img src="Logo/Hubz.avif" alt="Hubz"></div><div class="client-logo"><img src="Logo/ZygEdge.webp" alt="ZYG EDGE"></div></div>
+                <div class="clients-track" aria-hidden="true"><div class="client-logo"><img src="Logo/Tshuva.avif" alt=""></div><div class="client-logo"><img src="Logo/Aman.webp" alt=""></div><div class="client-logo"><img src="Logo/PlayPerfect.webp" alt=""></div><div class="client-logo"><img src="Logo/Peilim.webp" alt=""></div><div class="client-logo"><img src="Logo/Voyage81.webp" alt=""></div><div class="client-logo"><img src="Logo/Shekel.webp" alt=""></div><div class="client-logo"><img src="Logo/LABS.avif" alt=""></div><div class="client-logo"><img src="Logo/ZeclerArgov.webp" alt=""></div><div class="client-logo"><img src="Logo/One1.webp" alt=""></div><div class="client-logo"><img src="Logo/Margolin.webp" alt=""></div><div class="client-logo"><img src="Logo/Dalia.webp" alt=""></div><div class="client-logo"><img src="Logo/Hubz.avif" alt=""></div><div class="client-logo"><img src="Logo/ZygEdge.webp" alt=""></div></div>
+            </div>
         </div>
     </section>
 
