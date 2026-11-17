@@ -1,5 +1,24 @@
-﻿// Auto-generated - 2026-09-17 11:35:00
+// Auto-generated - 2026-09-17 11:35:00
 const PROJECTS_DATA = [
+  {
+    "name": "פרויקט משרדים במת\"ם חיפה",
+    "images": [
+      "projects/haifa-offices/haifa-offices-1.webp",
+      "projects/haifa-offices/haifa-offices-2.webp",
+      "projects/haifa-offices/haifa-offices-3.webp"
+    ]
+  },
+  {
+    "name": "Similarweb",
+    "images": [
+      "projects/office-project-2/office-2.webp",
+      "projects/office-project-2/office-3.webp",
+      "projects/office-project-2/office-4.webp",
+      "projects/office-project-2/office-5.webp",
+      "projects/office-project-2/office-6.webp",
+      "projects/office-project-2/office-7.webp"
+    ]
+  },
   {
     "name": "Aman",
     "images": [
