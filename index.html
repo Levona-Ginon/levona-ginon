@@ -444,6 +444,7 @@
             justify-content: center;
             margin: 0 auto 20px;
             font-size: 2rem;
+            color: var(--green-mid);
         }
 
         .service-card h3 {
@@ -1045,6 +1046,46 @@
             opacity: 1;
         }
 
+        .google-review {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            margin: 35px auto 0;
+            text-align: center;
+        }
+
+        .gr-stars {
+            color: #f4b400;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+        }
+
+        .gr-text {
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .gr-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--text-dark);
+            border: 1px solid #dadce0;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: box-shadow 0.3s;
+        }
+
+        .gr-btn:hover {
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        }
+
         /* Contact */
         .contact {
             background: var(--green-dark);
@@ -1089,6 +1130,7 @@
             justify-content: center;
             font-size: 1.3rem;
             flex-shrink: 0;
+            color: var(--white);
         }
 
         .contact-item span {
@@ -1913,37 +1955,37 @@
         </div>
         <div class="services-grid">
             <div class="service-card fade-in">
-                <div class="service-icon">🌿</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg></div>
                 <h3 data-he="צמחיית פנים" data-en="Indoor Plants">צמחיית פנים</h3>
                 <p data-he="תכנון והקמת גינות פנים, אזורים ירוקים ופינות ישיבה ירוקות למשרדים ומוסדות" data-en="Planning and building indoor gardens, green areas and green seating corners for offices and institutions">תכנון והקמת גינות פנים, אזורים ירוקים ופינות ישיבה ירוקות למשרדים ומוסדות</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">💧</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
                 <h3 data-he="אחזקה שוטפת" data-en="Ongoing Maintenance">אחזקה שוטפת</h3>
                 <p data-he="ביקור קבוע מדי שבוע: השקיה, דישון, ניקוי עלים, גיזום והחלפת צמחים לפי הצורך. אתם עובדים, אנחנו דואגים שהצמחייה תישאר חיה ויפה." data-en="A fixed weekly visit: watering, feeding, leaf cleaning, pruning and replacing plants as needed. You work, we keep your plants alive and beautiful.">ביקור קבוע מדי שבוע: השקיה, דישון, ניקוי עלים, גיזום והחלפת צמחים לפי הצורך. אתם עובדים, אנחנו דואגים שהצמחייה תישאר חיה ויפה.</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">🌳</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg></div>
                 <h3 data-he="צמחיית חוץ" data-en="Outdoor Plants">צמחיית חוץ</h3>
                 <p data-he="גינות גן, גינות גג, פאטיו, פארקים, בריכות נוי וגינון באזורי מגורים" data-en="Garden landscaping, rooftop gardens, patios, parks, ornamental pools and residential area gardening">גינות גן, גינות גג, פאטיו, פארקים, בריכות נוי וגינון באזורי מגורים</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">🧪</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></div>
                 <h3 data-he="הידרופוניקה" data-en="Hydroponics">הידרופוניקה</h3>
                 <p data-he="שיטת גידול צמחים מתקדמת במצע מנותק - חיסכון במים, פחות לכלוך, ירוק כל השנה" data-en="Advanced soilless plant growing method - water saving, less mess, green all year round">שיטת גידול צמחים מתקדמת במצע מנותק - חיסכון במים, פחות לכלוך, ירוק כל השנה</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">🎨</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
                 <h3 data-he="צמחייה מלאכותית" data-en="Artificial Plants">צמחייה מלאכותית</h3>
                 <p data-he="צמחייה מלאכותית באיכות גבוהה למקומות בהם התנאים לא מאפשרים צמחייה טבעית" data-en="High-quality artificial plants for spaces where natural plants cannot thrive">צמחייה מלאכותית באיכות גבוהה למקומות בהם התנאים לא מאפשרים צמחייה טבעית</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">🏢</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
                 <h3 data-he="מרפסות וגגות ירוקים" data-en="Green Balconies & Rooftops">מרפסות וגגות ירוקים</h3>
                 <p data-he="הקמת מרפסות וגגות ירוקים משלב התכנון ועד המסירה ללקוח" data-en="Building green balconies and rooftops from planning stage to client delivery">הקמת מרפסות וגגות ירוקים משלב התכנון ועד המסירה ללקוח</p>
             </div>
             <div class="service-card fade-in">
-                <div class="service-icon">🪴</div>
+                <div class="service-icon"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12l-1.6 10H7.6z"/><path d="M12 11V7"/><path d="M12 7c0-2.2 1.8-4 4-4 0 2.2-1.8 4-4 4z"/><path d="M12 8c0-2.2-1.8-4-4-4 0 2.2 1.8 4 4 4z"/></svg></div>
                 <h3 data-he="אספקת כדים ועיצוב" data-en="Pots Supply & Design">אספקת כדים ועיצוב</h3>
                 <p data-he="מכירת כדים ועיצוב ירוק של חלל המשרד בהתאמה אישית" data-en="Pot sales and custom green design for office spaces">מכירת כדים ועיצוב ירוק של חלל המשרד בהתאמה אישית</p>
             </div>
@@ -1970,15 +2012,15 @@
             <blockquote data-he="לפתח ולהעשיר את מרחב המחיה שלנו, תוך התחשבות בצרכים הבסיסיים של הלקוח. יצירת מרחבים ירוקים המשפיעה על הגוף והנפש היא המפתח למיצוי הפוטנציאל של כל אחד." data-en="To develop and enrich our living spaces while considering the basic needs of the client. Creating green spaces that affect body and mind is the key to fulfilling everyone's potential.">לפתח ולהעשיר את מרחב המחיה שלנו, תוך התחשבות בצרכים הבסיסיים של הלקוח. יצירת מרחבים ירוקים המשפיעה על הגוף והנפש היא המפתח למיצוי הפוטנציאל של כל אחד.</blockquote>
             <div class="vision-cards">
                 <div class="vision-card">
-                    <h4 data-he="🌱 אני מאמין" data-en="🌱 I Believe">🌱 אני מאמין</h4>
+                    <h4 data-he="אני מאמין" data-en="I Believe">אני מאמין</h4>
                     <p data-he="טיפוח מרחב העבודה שלנו באזורים ירוקים הוא הבסיס לאיזון, לשלווה ולאיכות עבודה גבוהה." data-en="Nurturing our workspace with green areas is the foundation for balance, calm and high-quality work.">טיפוח מרחב העבודה שלנו באזורים ירוקים הוא הבסיס לאיזון, לשלווה ולאיכות עבודה גבוהה.</p>
                 </div>
                 <div class="vision-card">
-                    <h4 data-he="👥 צוותי העבודה" data-en="👥 Our Teams">👥 צוותי העבודה</h4>
+                    <h4 data-he="צוותי העבודה" data-en="Our Teams">צוותי העבודה</h4>
                     <p data-he="עובדי החברה עוברים הכשרה יסודית וכפופים למפקחים בעלי ניסיון מוכח של למעלה מ-15 שנה. מנהלת החברה מעורבת באופן אישי בכל פרויקט." data-en="Our employees undergo thorough training and are supervised by inspectors with over 15 years of proven experience. The company's CEO is personally involved in every project.">עובדי החברה עוברים הכשרה יסודית וכפופים למפקחים בעלי ניסיון מוכח של למעלה מ-15 שנה. מנהלת החברה מעורבת באופן אישי בכל פרויקט.</p>
                 </div>
                 <div class="vision-card">
-                    <h4 data-he="🤝 ליווי צמוד" data-en="🤝 Close Support">🤝 ליווי צמוד</h4>
+                    <h4 data-he="ליווי צמוד" data-en="Close Support">ליווי צמוד</h4>
                     <p data-he="בכל רגע נתון אנו כאן בשבילכם, לכל בעיה, שאלה או שינוי. אנו כאן כדי להפוך את יצירת החלל הירוק שלכם לחוויה מהנה." data-en="We are here for you at all times, for any question, problem or change. We're here to make creating your green space an enjoyable experience.">בכל רגע נתון אנו כאן בשבילכם, לכל בעיה, שאלה או שינוי. אנו כאן כדי להפוך את יצירת החלל הירוק שלכם לחוויה מהנה.</p>
                 </div>
             </div>
@@ -2029,6 +2071,11 @@
                 <div class="clients-track" aria-hidden="true"><div class="client-logo"><img src="Logo/Tshuva.avif" alt=""></div><div class="client-logo"><img src="Logo/Aman.webp" alt=""></div><div class="client-logo"><img src="Logo/RomGevas.webp" alt=""></div><div class="client-logo"><img src="Logo/PlayPerfect.webp" alt=""></div><div class="client-logo"><img src="Logo/Peilim.webp" alt=""></div><div class="client-logo"><img src="Logo/Voyage81.webp" alt=""></div><div class="client-logo"><img src="Logo/Shekel.webp" alt=""></div><div class="client-logo"><img src="Logo/LABS.avif" alt=""></div><div class="client-logo"><img src="Logo/KataGroup.webp" alt=""></div><div class="client-logo"><img src="Logo/ZeclerArgov.webp" alt=""></div><div class="client-logo"><img src="Logo/One1.webp" alt=""></div><div class="client-logo"><img src="Logo/Margolin.webp" alt=""></div><div class="client-logo"><img src="Logo/Dalia.webp" alt=""></div><div class="client-logo"><img src="Logo/Hubz.avif" alt=""></div><div class="client-logo"><img src="Logo/ZygEdge.webp" alt=""></div></div>
             </div>
         </div>
+        <div class="google-review fade-in">
+            <span class="gr-stars" aria-hidden="true">★★★★★</span>
+            <span class="gr-text">לקוחות ממליצים עלינו בגוגל</span>
+            <a class="gr-btn" href="https://search.google.com/local/writereview?placeid=ChIJo79N4HtMHRURt6VkRxXx6kE" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span>דרגו אותנו בגוגל</span></a>
+        </div>
     </section>
 
     <!-- Contact -->
@@ -2041,23 +2088,23 @@
         <div class="contact-grid">
             <div class="contact-info fade-in">
                 <div class="contact-item">
-                    <div class="icon">📍</div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
                     <span data-he="פרדסיה, ישראל" data-en="Pardesiya, Israel">פרדסיה, ישראל</span>
                 </div>
                 <div class="contact-item">
-                    <div class="icon">🗺️</div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg></div>
                     <span data-he="אזורי שירות: מחיפה ועד אשדוד" data-en="Service area: from Haifa to Ashdod">אזורי שירות: מחיפה ועד אשדוד</span>
                 </div>
                 <div class="contact-item">
-                    <div class="icon">🕐</div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
                     <span data-he="זמינים 24/7" data-en="Available 24/7">זמינים 24/7</span>
                 </div>
                 <div class="contact-item">
-                    <div class="icon">📞</div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
                     <span><a href="tel:09-8946155">09-8946155</a></span>
                 </div>
                 <div class="contact-item">
-                    <div class="icon">📱</div>
+                    <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></div>
                     <span><a href="tel:052-5555846">052-5555846</a></span>
                 </div>
                 <div class="contact-item">
@@ -2180,6 +2227,7 @@
         <p data-he="© 2026 לבונה גינון ונוי | כל הזכויות שמורות" data-en="© 2026 Levona Ginon | All Rights Reserved">© 2026 לבונה גינון ונוי | כל הזכויות שמורות</p>
         <p style="margin-top:8px;">
             <a href="terms.html" data-he="תקנון שימוש" data-en="Terms of Use">תקנון שימוש</a>
+            <a href="https://search.google.com/local/writereview?placeid=ChIJo79N4HtMHRURt6VkRxXx6kE" target="_blank" rel="noopener">דרגו אותנו בגוגל</a>
             <a href="privacy.html" data-he="מדיניות פרטיות" data-en="Privacy Policy">מדיניות פרטיות</a>
         </p>
     </footer>
