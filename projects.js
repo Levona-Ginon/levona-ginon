@@ -1,4 +1,4 @@
-// Updated 2026-11-19: web-optimized images, TCM removed
+// Updated 2026-11-19: web-optimized images, TCM and Samsung removed
 const PROJECTS_DATA = [
   {
     "name": "פרויקט משרדים במת\"ם חיפה",
@@ -138,19 +138,6 @@ const PROJECTS_DATA = [
       "projects/Prospera/prospera-9.webp",
       "projects/Prospera/prospera-10.webp",
       "projects/Prospera/prospera-11.webp"
-    ]
-  },
-  {
-    "name": "Samsung",
-    "images": [
-      "projects/Samsung/samsung-1.webp",
-      "projects/Samsung/samsung-2.webp",
-      "projects/Samsung/samsung-3.webp",
-      "projects/Samsung/samsung-4.webp",
-      "projects/Samsung/samsung-5.webp",
-      "projects/Samsung/samsung-6.webp",
-      "projects/Samsung/samsung-7.webp",
-      "projects/Samsung/samsung-8.webp"
     ]
   }
 ];
