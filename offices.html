@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f3ec;--card:#fffdf9;--olive:#6b6f4c;--olive-d:#5c613e;--clay:#c27a52;--ink:#3f3a33;--text:#5a544b;--muted:#8a8478;--line:#e6ddd0}
+:root{--bg:#f7f3ec;--card:#fffdf9;--olive:#6b6f4c;--olive-d:#5c613e;--clay:#c27a52;--ink:#3f3a33;--text:#5a544b;--muted:#6b665b;--line:#e6ddd0}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip}
 html{scroll-behavior:smooth}
@@ -100,7 +100,7 @@ h1,h2,h3{font-family:'Assistant',sans-serif;font-weight:300;line-height:1.15}
 .trow{display:flex;align-items:center;gap:18px}
 .tcards{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .tc{background:var(--card);border-radius:16px;padding:20px 22px;box-shadow:0 2px 14px rgba(60,50,40,.05)}
-.tc .stars{color:#e0a73a;letter-spacing:2px;font-size:1rem;display:block;margin-bottom:6px}
+.tc .stars{color:#b07d14;letter-spacing:2px;font-size:1rem;display:block;margin-bottom:6px}
 .tc .m{font-family:'Assistant',sans-serif;font-weight:300;font-size:2rem;color:var(--ink);line-height:.4;display:block;margin-bottom:8px}
 .tc p{font-size:.9rem;color:var(--ink);margin-bottom:12px}
 .tc .who{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted)}
@@ -196,25 +196,33 @@ footer a{margin-inline:10px}
 .band .wrap{padding-inline-start:20px}
   .about .ph .sprig{width:120px;left:-40px;bottom:0}
 }
+/* accessibility */
+.skip{position:absolute;top:-60px;right:16px;z-index:100;background:var(--ink);color:#fff;padding:10px 18px;border-radius:0 0 12px 12px;font-weight:500}
+.skip:focus{top:0}
+form input:focus-visible,form select:focus-visible,form textarea:focus-visible{box-shadow:0 0 0 2px var(--olive)}
+form [aria-invalid="true"]{border-color:#a3402e}
+body.at-top .sticky{visibility:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
 </style>
 </head>
 <body class="at-top">
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><clipPath id="heroClip" clipPathUnits="objectBoundingBox"><path d="M0 0 H0.88 C0.8 0.2 0.83 0.45 0.87 0.62 C0.91 0.8 0.96 0.95 1 1 H0 Z"/></clipPath></svg>
 <header class="top">
   
   <div class="wrap">
     <a class="brand" href="index.html"><img src="images/lp/logo-mark.png" alt="">לבונה גינון</a>
     <nav aria-label="ניווט"><a class="on" href="index.html">בית</a><a href="#services">שירותים</a><a href="#projects">פרויקטים</a><a href="#about">עלינו</a><a href="#contact">צור קשר</a></nav>
-    <a class="pill" href="#contact">לקבלת הצעת מחיר <span class="ar">←</span></a>
+    <a class="pill" href="#contact">לקבלת הצעת מחיר <span class="ar" aria-hidden="true">←</span></a>
   </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="txt">
     <span class="eyebrow">לבונה גינון</span>
     <h1><em>עיצוב ירוק</em><br>לחללים מעוררי השראה</h1>
     <p>תכנון, אספקה ותחזוקה של צמחייה פנים למשרדים, חללים מסחריים ופרטיים, עם התאמה מושלמת לעיצוב ולסביבה.</p>
-    <a class="pill" href="#contact">לדבר איתנו <span class="ar">←</span></a>
+    <a class="pill" href="#contact">לדבר איתנו <span class="ar" aria-hidden="true">←</span></a>
   </div>
   <div class="img"><img src="images/lp/lounge-hero2.webp" alt="פיקוס כינורי ומונסטרה בעציצים בפינת ישיבה מוארת מול חלון" fetchpriority="high"></div>
 </section>
@@ -235,7 +243,7 @@ footer a{margin-inline:10px}
       <span class="cap">אודות לבונה גינון</span>
       <h2>מומחים בצמחיית פנים למשרדים</h2>
       <p>לבונה גינון מתמחה בתכנון, עיצוב ותחזוקה של צמחייה במשרדים וחללי עבודה. אנו משלבים ידע מקצועי, התאמה מדויקת לחלל ולצרכי הארגון, וליווי שוטף שמבטיח סביבת עבודה ירוקה, נעימה ומרשימה לאורך זמן.</p>
-      <a class="pill line" href="index.html#about">קראו עלינו <span class="ar">←</span></a>
+      <a class="pill line" href="index.html#about">קראו עלינו <span class="ar" aria-hidden="true">←</span></a>
     </div>
     <div class="ph"><img class="sprig" src="images/lp/sprig-about.png" alt="" aria-hidden="true"><img src="images/lp/fiddle-terracotta.webp" alt="פיקוס כינורי בעציץ טרקוטה גבוה במסדרון משרדים" loading="lazy" style="object-position:50% 78%;aspect-ratio:2/3;width:78%;margin-inline:auto;display:block"></div>
   </div>
@@ -245,10 +253,10 @@ footer a{margin-inline:10px}
   <div class="wrap">
     <div class="shead"><span class="cap">השירותים שלנו</span><h2>פתרונות גינון מתקדמים לחללים פנימיים</h2></div>
     <div class="cards">
-      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12l-1.6 10H7.6z"/><path d="M5 11h14"/><path d="M12 11V7"/><path d="M12 7c0-2.2 1.8-4 4-4 0 2.2-1.8 4-4 4z"/><path d="M12 8c0-2.2-1.8-4-4-4 0 2.2 1.8 4 4 4z"/></svg></div><h3>התאמת צמחייה</h3><p>בחירת צמחים מותאמים לחלל, לתנאי התאורה ולסגנון המשרד, ליצירת סביבה בריאה ומאוזנת.</p><a href="#contact">לפרטים <span class="ar">←</span></a></div>
-      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div><h3>תחזוקה שוטפת</h3><p>טיפול מקצועי קבוע בצמחים, כולל גיזום, דישון, החלפה ודאגה למראה מיטבי לאורך זמן.</p><a href="#contact">לפרטים <span class="ar">←</span></a></div>
-      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M12 20v-8"/><path d="M12 12c0-3 2-5 6-5 0 3-2 5-6 5z"/><path d="M12 13c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg></div><h3>הלבשת חללים</h3><p>עיצוב וסטיילינג ירוק שמכניס אופי, רוגע וחיים לחללי העבודה.</p><a href="#contact">לפרטים <span class="ar">←</span></a></div>
-      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>ליווי למשרדים</h3><p>שירות אישי וליווי מקצועי לאורך כל הדרך, משלב התכנון ועד התחזוקה השוטפת.</p><a href="#contact">לפרטים <span class="ar">←</span></a></div>
+      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 11h12l-1.6 10H7.6z"/><path d="M5 11h14"/><path d="M12 11V7"/><path d="M12 7c0-2.2 1.8-4 4-4 0 2.2-1.8 4-4 4z"/><path d="M12 8c0-2.2-1.8-4-4-4 0 2.2 1.8 4 4 4z"/></svg></div><h3>התאמת צמחייה</h3><p>בחירת צמחים מותאמים לחלל, לתנאי התאורה ולסגנון המשרד, ליצירת סביבה בריאה ומאוזנת.</p><a href="#contact" aria-label="לפרטים על התאמת צמחייה">לפרטים <span class="ar" aria-hidden="true">←</span></a></div>
+      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></div><h3>תחזוקה שוטפת</h3><p>טיפול מקצועי קבוע בצמחים, כולל גיזום, דישון, החלפה ודאגה למראה מיטבי לאורך זמן.</p><a href="#contact" aria-label="לפרטים על תחזוקה שוטפת">לפרטים <span class="ar" aria-hidden="true">←</span></a></div>
+      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M12 20v-8"/><path d="M12 12c0-3 2-5 6-5 0 3-2 5-6 5z"/><path d="M12 13c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg></div><h3>הלבשת חללים</h3><p>עיצוב וסטיילינג ירוק שמכניס אופי, רוגע וחיים לחללי העבודה.</p><a href="#contact" aria-label="לפרטים על הלבשת חללים">לפרטים <span class="ar" aria-hidden="true">←</span></a></div>
+      <div class="card"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>ליווי למשרדים</h3><p>שירות אישי וליווי מקצועי לאורך כל הדרך, משלב התכנון ועד התחזוקה השוטפת.</p><a href="#contact" aria-label="לפרטים על ליווי למשרדים">לפרטים <span class="ar" aria-hidden="true">←</span></a></div>
     </div>
   </div>
 </section>
@@ -257,9 +265,9 @@ footer a{margin-inline:10px}
   <div class="wrap">
     <div class="shead"><span class="cap">פרויקטים נבחרים</span><h2>משרדים ירוקים ומעוצבים</h2></div>
     <div class="pgrid">
-      <figure><img src="images/lp/corridor-sofa.webp" alt="דקל בעציץ מאחורי ספה בהירה במסדרון משרדי" loading="lazy" style="object-position:50% 55%"><figcaption><span class="ar">←</span> מסדרון ולאונג' משרדי</figcaption></figure>
-      <figure><img src="images/lp/rattan.webp" alt="אדנית סנסבייריה עגולה במרכז שולחנות עם כיסאות קש" loading="lazy"><figcaption><span class="ar">←</span> חלל עבודה משותף</figcaption></figure>
-      <figure><img src="images/lp/lobby-stone.webp" alt="לובי משרדי עם קיר אבן, דקל בכד ואדנית פותוס על הדלפק" loading="lazy"><figcaption><span class="ar">←</span> לובי משרדי</figcaption></figure>
+      <figure><img src="images/lp/corridor-sofa.webp" alt="דקל בעציץ מאחורי ספה בהירה במסדרון משרדי" loading="lazy" style="object-position:50% 55%"><figcaption><span class="ar" aria-hidden="true">←</span> מסדרון ולאונג' משרדי</figcaption></figure>
+      <figure><img src="images/lp/rattan.webp" alt="אדנית סנסבייריה עגולה במרכז שולחנות עם כיסאות קש" loading="lazy"><figcaption><span class="ar" aria-hidden="true">←</span> חלל עבודה משותף</figcaption></figure>
+      <figure><img src="images/lp/lobby-stone.webp" alt="לובי משרדי עם קיר אבן, דקל בכד ואדנית פותוס על הדלפק" loading="lazy"><figcaption><span class="ar" aria-hidden="true">←</span> לובי משרדי</figcaption></figure>
     </div>
   </div>
 </section>
@@ -279,7 +287,7 @@ footer a{margin-inline:10px}
   <div class="wrap">
     <div class="shead"><span class="cap">לקוחות ממליצים</span><h2>מה אומרים עלינו?</h2></div>
     <div class="tone">
-      <div class="tc"><span class="stars" aria-label="5 כוכבים">★★★★★</span><p>"אנו שמחים להמליץ בחום על חברת לבונה גינון, המלווה אותנו באופן שוטף כבר למעלה מ-7 שנים. לאורך כל שנות העבודה המשותפות, הצוות של לבונה גינון מפגין מקצועיות חסרת פשרות, אמינות ורמת ביצוע גבוהה ביותר. מעבר לתוצאות המרשימות בשטח, מה שמייחד אותם באמת הוא השירות המהיר, הזמינות הגבוהה לכל פנייה והיחס האישי, האדיב והמכבד שהם מעניקים לכלל העובדים שלנו. תענוג לעבוד עם ספק שירות שלוקח אחריות מלאה ופשוט אפשר לסמוך עליו בעיניים עצומות. מומלץ בחום!"</p><div class="who"><i aria-hidden="true">R</i><span><b>Rotem Erman</b>HiBob · ביקורת בגוגל</span></div></div>
+      <div class="tc"><span class="stars" role="img" aria-label="5 כוכבים">★★★★★</span><p>"אנו שמחים להמליץ בחום על חברת לבונה גינון, המלווה אותנו באופן שוטף כבר למעלה מ-7 שנים. לאורך כל שנות העבודה המשותפות, הצוות של לבונה גינון מפגין מקצועיות חסרת פשרות, אמינות ורמת ביצוע גבוהה ביותר. מעבר לתוצאות המרשימות בשטח, מה שמייחד אותם באמת הוא השירות המהיר, הזמינות הגבוהה לכל פנייה והיחס האישי, האדיב והמכבד שהם מעניקים לכלל העובדים שלנו. תענוג לעבוד עם ספק שירות שלוקח אחריות מלאה ופשוט אפשר לסמוך עליו בעיניים עצומות. מומלץ בחום!"</p><div class="who"><i aria-hidden="true">R</i><span><b>Rotem Erman</b>HiBob · ביקורת בגוגל</span></div></div>
     </div>
   </div>
 </section>
@@ -289,15 +297,15 @@ footer a{margin-inline:10px}
     <div class="cbox">
       <div class="fwrap">
       <form id="quoteForm" novalidate>
-        <div><input name="name" required autocomplete="name" placeholder="שם מלא" aria-label="שם מלא"></div>
-        <div><input name="phone" type="tel" required autocomplete="tel" placeholder="טלפון" aria-label="טלפון"></div>
+        <div><input name="name" required autocomplete="name" placeholder="שם מלא *" aria-label="שם מלא"></div>
+        <div><input name="phone" type="tel" required autocomplete="tel" placeholder="טלפון *" aria-label="טלפון"></div>
         <div class="full"><select name="service" aria-label="סוג העסק"><option value="">סוג העסק</option><option>משרד הייטק</option><option>משרד / חברה</option><option>חלל עבודה משותף</option><option>אחר</option></select></div>
         <div class="full"><textarea name="message" placeholder="ספרו לנו על המשרד שלכם..." aria-label="ספרו לנו על המשרד"></textarea></div>
         <input type="hidden" name="company" value=""><input type="hidden" name="email" value=""><input type="hidden" name="city" value="">
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-        <div class="full"><button class="pill" type="submit" id="quoteSubmit">שליחת פנייה <span class="ar">←</span></button></div>
-        <div class="full status" id="quoteStatus" role="status" aria-live="polite"></div>
-        <p class="full small">הפרטים ישמשו רק כדי לחזור אליכם. <a href="privacy.html" style="text-decoration:underline">מדיניות פרטיות</a></p>
+        <div class="full"><button class="pill" type="submit" id="quoteSubmit">שליחת פנייה <span class="ar" aria-hidden="true">←</span></button></div>
+        <div class="full status" id="quoteStatus" role="status" aria-live="polite" aria-atomic="true"></div>
+        <p class="full small">* שדה חובה. הפרטים ישמשו רק כדי לחזור אליכם. <a href="privacy.html" style="text-decoration:underline">מדיניות פרטיות</a></p>
       </form>
       </div>
       <div class="info">
@@ -305,7 +313,7 @@ footer a{margin-inline:10px}
         <p>נשמח לשוחח, להבין את הצרכים שלכם ולהציע פתרון מותאם אישית.</p>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+972525555846" dir="ltr">052-5555846</a></li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg><a href="https://www.instagram.com/levonaginon/" target="_blank" rel="noopener" dir="ltr">@levonaginon</a></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5"/></svg><a href="https://www.instagram.com/levonaginon/" target="_blank" rel="noopener" dir="ltr" aria-label="אינסטגרם levonaginon (נפתח בחלון חדש)">@levonaginon</a></li>
         </ul>
       </div>
       <span class="vl"></span>
@@ -314,9 +322,9 @@ footer a{margin-inline:10px}
   </div>
 </section>
 </main>
-<footer>© 2026 לבונה גינון ונוי · פרדסיה <a href="index.html">לאתר הראשי</a><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תקנון</a></footer>
+<footer>© 2026 לבונה גינון ונוי · פרדסיה <a href="index.html">לאתר הראשי</a><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תקנון</a><a href="accessibility.html">הצהרת נגישות</a></footer>
 <a class="sticky" href="#contact">לתיאום שיחה</a>
-<a class="wa" href="https://wa.me/972525555846" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35zM12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zM20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg></a>
+<a class="wa" href="https://wa.me/972525555846" target="_blank" rel="noopener" aria-label="וואטסאפ (נפתח בחלון חדש)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35zM12.05 21.8a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88zM20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg></a>
 <script>
 (function(){
   var b=document.body;function f(){b.classList.toggle('at-top', window.scrollY<500);}
@@ -325,7 +333,8 @@ footer a{margin-inline:10px}
   var form=document.getElementById('quoteForm'),st=document.getElementById('quoteStatus'),btn=document.getElementById('quoteSubmit');
   form.addEventListener('submit',async function(e){
     e.preventDefault();
-    if(!form.name.value.trim()||!form.phone.value.trim()){st.className='full status err';st.textContent='נא למלא שם וטלפון';return;}
+    var miss=[form.name,form.phone].filter(function(x){var bad=!x.value.trim();x.setAttribute('aria-invalid',bad?'true':'false');if(bad)x.setAttribute('aria-describedby','quoteStatus');else x.removeAttribute('aria-describedby');return bad});
+    if(miss.length){st.className='full status err';st.textContent='נא למלא '+miss.map(function(x){return x.getAttribute('aria-label')}).join(' ו')+'.';miss[0].focus();return;}
     if(form.botcheck.checked)return;
     btn.disabled=true;st.className='full status';st.textContent='שולח...';
     var data={subject:'פנייה חדשה מדף המשרדים - הצעת מחיר',from_name:'אתר לבונה גינון','שם':form.name.value,'טלפון':form.phone.value,'סוג העסק':form.service.value,'פרטים':form.message.value};

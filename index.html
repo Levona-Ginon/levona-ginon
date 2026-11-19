@@ -1481,6 +1481,20 @@
             color: #666;
             line-height: 1.6;
         }
+        .a11y-statement-link {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 14px;
+            border: 1px solid #2d6a4f;
+            border-radius: 20px;
+            color: #2d6a4f;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+        .a11y-statement-link:hover, .a11y-statement-link:focus-visible {
+            background: #2d6a4f;
+            color: #fff;
+        }
 
         .a11y-statement p {
             margin-bottom: 8px;
@@ -1804,11 +1818,11 @@
 
     <div class="a11y-menu" id="a11yMenu" role="dialog" aria-label="תפריט נגישות" aria-hidden="true">
         <div class="a11y-header">
-            <h3>♿ הצהרת נגישות</h3>
+            <h3>♿ תפריט נגישות</h3>
             <button class="a11y-close" onclick="toggleA11yMenu()" aria-label="סגור תפריט נגישות">&times;</button>
         </div>
         <div class="a11y-body">
-            <p class="a11y-desc">אתר זה עומד בדרישות תקנות שוויון זכויות לאנשים עם מוגבלות (IS 5568) ברמת AA לפי הנחיות WCAG 2.0</p>
+            <p class="a11y-desc">כלים להתאמת התצוגה באתר לפי הצורך שלכם.</p>
             
             <div class="a11y-section-title">התאמות תצוגה</div>
             
@@ -1871,8 +1885,8 @@
             </button>
 
             <div class="a11y-statement">
-                <p><strong>הצהרת נגישות:</strong> אתר לבונה גינון ונוי פועל להנגשת האתר לאנשים עם מוגבלות בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013 ולתקן הישראלי IS 5568 ברמת AA.</p>
-                <p><strong>רכז נגישות:</strong> לבונה גינון ונוי<br>טלפון: 052-5555846<br>נשמח לסייע בכל פנייה בנושא נגישות.</p>
+                <p>נתקלתם בקושי באתר? רכזת הנגישות שלנו, אתי שלג, תשמח לעזור: <a href="tel:+972525555846" dir="ltr">052-5555846</a></p>
+                <a class="a11y-statement-link" href="accessibility.html">להצהרת הנגישות המלאה <span aria-hidden="true">←</span></a>
             </div>
         </div>
     </div>
@@ -2233,6 +2247,7 @@
             <a href="terms.html" data-he="תקנון שימוש" data-en="Terms of Use">תקנון שימוש</a>
             <a href="https://search.google.com/local/writereview?placeid=ChIJo79N4HtMHRURt6VkRxXx6kE" target="_blank" rel="noopener">דרגו אותנו בגוגל</a>
             <a href="privacy.html" data-he="מדיניות פרטיות" data-en="Privacy Policy">מדיניות פרטיות</a>
+            <a href="accessibility.html" data-he="הצהרת נגישות" data-en="Accessibility Statement">הצהרת נגישות</a>
         </p>
     </footer>
 

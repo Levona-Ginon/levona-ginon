@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>הצהרת נגישות | לבונה גינון ונוי</title>
+<meta name="description" content="הצהרת הנגישות של אתר לבונה גינון ונוי: מה הונגש, מה עוד בטיפול, ואיך לפנות אלינו בנושא נגישות.">
+<link rel="canonical" href="https://www.levona-ginon.co.il/accessibility.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="theme-color" content="#23351c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f3ec;--card:#fffdf9;--olive:#6b6f4c;--olive-d:#5c613e;--ink:#3f3a33;--text:#5a544b;--muted:#6b665b;--line:#e6ddd0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Assistant',sans-serif;color:var(--text);background:var(--bg);line-height:1.8;font-size:16px}
+a{color:var(--olive-d);text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.skip{position:absolute;top:-60px;right:16px;z-index:100;background:var(--ink);color:#fff;padding:10px 18px;border-radius:0 0 12px 12px;text-decoration:none}
+.skip:focus{top:0}
+.top{max-width:860px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:300;font-size:1.7rem;color:var(--ink);text-decoration:none}
+.brand img{width:40px;height:40px}
+main{max-width:860px;margin:0 auto 40px;padding:34px 40px;background:var(--card);border-radius:24px;box-shadow:0 2px 14px rgba(60,50,40,.05)}
+h1{font-weight:300;font-size:clamp(2rem,4vw,2.6rem);color:var(--ink);line-height:1.2;margin-bottom:6px}
+h2{font-weight:500;font-size:1.25rem;color:var(--ink);margin:28px 0 8px}
+p,li{font-size:1rem}
+p{margin-bottom:10px}
+ul{padding-inline-start:22px;margin-bottom:10px}
+li{margin-bottom:4px}
+.upd{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+.contact{background:#efe7da;border-radius:16px;padding:18px 22px;margin-top:10px}
+.contact dt{font-weight:600;color:var(--ink)}
+.contact dd{margin:0 0 8px}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:0 20px 34px}
+footer a{margin-inline:8px;color:var(--muted)}
+@media (max-width:640px){main{padding:24px 20px;border-radius:0}.top{padding:16px 20px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
+<header class="top">
+  <a class="brand" href="index.html"><img src="images/lp/logo-mark.png" alt="">לבונה גינון</a>
+  <a href="index.html">חזרה לאתר</a>
+</header>
+<main id="main" tabindex="-1">
+  <h1>הצהרת נגישות</h1>
+  <p class="upd">עודכנה לאחרונה: 19 בנובמבר 2026</p>
+
+  <p>לבונה גינון ונוי רואה חשיבות רבה במתן שירות שוויוני לכל הלקוחות והגולשים, ופועלת להנגשת האתר לאנשים עם מוגבלות. ההנגשה נעשית בהתאם לחוק שוויון זכויות לאנשים עם מוגבלות, התשנ"ח-1998, לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, ולתקן הישראלי ת"י 5568, המבוסס על הנחיות WCAG 2.0 ברמה AA.</p>
+
+  <h2>מה עשינו כדי להנגיש את האתר</h2>
+  <ul>
+    <li>האתר מוגדר בעברית ובכיוון כתיבה מימין לשמאל, כך שתוכנות הקראה קוראות אותו נכון.</li>
+    <li>לתמונות שמעבירות מידע יש תיאור טקסטואלי. תמונות וקישוטים שאינם מעבירים מידע מוסתרים מתוכנות ההקראה.</li>
+    <li>אפשר לנווט באתר כולו באמצעות המקלדת (Tab ו-Shift+Tab), והרכיב הפעיל מסומן במסגרת.</li>
+    <li>בראש כל דף יש קישור "דילוג לתוכן הראשי".</li>
+    <li>הכותרות בדפים בנויות במבנה היררכי.</li>
+    <li>לשדות בטופס יצירת הקשר יש שמות שתוכנות ההקראה קוראות. אם חסר שדה חובה, מופיעה הודעה, והסמן עובר לשדה החסר.</li>
+    <li>קישורים שנפתחים בחלון חדש מסומנים ככאלה לתוכנות ההקראה.</li>
+    <li>אפשר להגדיל את הטקסט עד 200% בעזרת הגדלת התצוגה בדפדפן (Ctrl ו-+), בלי לאבד תוכן.</li>
+    <li>האתר מתאים את עצמו לטלפונים ולמסכים בגדלים שונים.</li>
+    <li>אם בהגדרות המכשיר נבחרה הפחתת תנועה, האתר מבטל את הגלילה והמעברים המונפשים.</li>
+  </ul>
+
+  <h2>חלקים שעדיין לא נגישים במלואם</h2>
+  <p>אנחנו ממשיכים לשפר את הנגישות באתר. ידוע לנו על הנושאים הבאים, והם בטיפול:</p>
+  <ul>
+    <li>בדף הבית: לחלק מלוגואי הלקוחות אין עדיין תיאור טקסטואלי.</li>
+    <li>בדף הבית: לשדות בטופס יצירת הקשר אין עדיין תוויות קבועות שתוכנות ההקראה קוראות.</li>
+    <li>בדף הבית: לחלק מקישורי הרשתות החברתיות אין עדיין שם טקסטואלי, והסימון של הרכיב הפעיל בניווט במקלדת חלש.</li>
+  </ul>
+  <p>אם נתקלתם בקושי באתר, נשמח שתספרו לנו, ונדאג לתת לכם את המידע או השירות בדרך אחרת.</p>
+
+  <h2>נגישות השירות</h2>
+  <p>השירות שלנו ניתן אצל הלקוחות, במשרדים ובחללי העבודה שלהם. אין לנו משרד שמקבל קהל. אם אתם צריכים התאמה כלשהי בתיאום או בביקור, ספרו לנו ונדאג לה.</p>
+
+  <h2>פנייה בנושא נגישות</h2>
+  <p>אם מצאתם בעיה בנגישות האתר או השירות, או שיש לכם הצעה לשיפור, נשמח לשמוע. כדי שנוכל לטפל בפנייה, כדאי לציין את הדף שבו הייתה הבעיה ומה ניסיתם לעשות.</p>
+  <dl class="contact">
+    <dt>רכז/ת נגישות</dt><dd>אתי שלג</dd>
+    <dt>טלפון</dt><dd><a href="tel:+972525555846" dir="ltr">052-5555846</a></dd>
+    <dt>דוא"ל</dt><dd><a href="mailto:eti@levona-ginon.co.il" dir="ltr">eti@levona-ginon.co.il</a></dd>
+  </dl>
+</main>
+<footer>© 2026 לבונה גינון ונוי · פרדסיה <a href="index.html">לאתר הראשי</a><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תקנון</a></footer>
+</body>
+</html>
