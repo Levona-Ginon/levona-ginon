@@ -491,6 +491,9 @@
 
         .project-block {
             direction: rtl;
+            flex: 0 0 100%;
+            max-width: 100%;
+            overflow: hidden; /* a long title or many dots must not widen the block */
             min-width: 100%;
             flex-shrink: 0;
             padding: 0 10px;
@@ -707,6 +710,10 @@
             justify-content: center;
             gap: 8px;
             margin-top: 20px;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .carousel-dot {
@@ -774,6 +781,8 @@
 
         .lightbox img {
             max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
             max-height: 85vh;
             border-radius: 8px;
             box-shadow: 0 10px 50px rgba(0,0,0,0.5);
@@ -2530,7 +2539,7 @@
                 html += '<div class="carousel-viewport">';
                 html += '<div class="carousel-track">';
                 project.images.forEach((img, iIdx) => {
-                    const encodedImg = encodeURI(img).replace(/'/g, "%27");
+                    const encodedImg = encodeURI(img).replace(/'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
                     const stateClass = iIdx === 0 ? 'active' : (iIdx === 1 ? 'next' : (iIdx === project.images.length - 1 ? 'prev' : 'hidden'));
                     html += '<div class="carousel-slide ' + stateClass + '" data-index="' + iIdx + '">';
                     html += '<div class="slide-bg" style="background-image:url(\'' + encodedImg + '\')"></div>';
