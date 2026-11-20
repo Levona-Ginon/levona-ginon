@@ -203,6 +203,28 @@ form input:focus-visible,form select:focus-visible,form textarea:focus-visible{b
 form [aria-invalid="true"]{border-color:#a3402e}
 body.at-top .sticky{visibility:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
+/* testimonials: two cards + rating (20.11) */
+.rating{display:table;margin:-14px auto 22px;color:var(--ink);font-size:1rem;text-decoration:none}
+.rating b{font-weight:600}
+.rating .rstars{color:#b07d14;letter-spacing:2px}
+.rating:hover{color:var(--olive)}
+.tone{max-width:1000px;display:grid;grid-template-columns:1.4fr 1fr;gap:18px;align-items:stretch}
+.tone .tc{display:flex;flex-direction:column;justify-content:center}
+@media (max-width:820px){.tone{grid-template-columns:1fr}.tone .tc{padding:24px 22px}}
+/* mobile header + band leaf (fix 20.11) */
+@media (max-width:600px){
+  .top .wrap{height:auto;min-height:64px;padding-block:10px;gap:10px}
+  .brand{font-size:1.45rem;white-space:nowrap;gap:8px;flex-shrink:0}
+  .brand img{width:34px;height:34px}
+  .top .pill{white-space:nowrap;padding:8px 14px;font-size:.8rem;gap:6px}
+  .band .sprig{width:92px;top:-44px;right:-22px}
+  .band .wrap{padding-top:34px}
+}
+@media (max-width:380px){
+  .top .pill .ar{display:none}
+  .brand{font-size:1.25rem}
+  .brand img{width:30px;height:30px}
+}
 </style>
 </head>
 <body class="at-top">
@@ -286,8 +308,10 @@ body.at-top .sticky{visibility:hidden}
 <section class="tst" id="tst">
   <div class="wrap">
     <div class="shead"><span class="cap">לקוחות ממליצים</span><h2>מה אומרים עלינו?</h2></div>
+    <a class="rating" href="https://search.google.com/local/reviews?placeid=ChIJo79N4HtMHRURt6VkRxXx6kE" target="_blank" rel="noopener" aria-label="דירוג 5.0 מתוך 5, 12 ביקורות בגוגל (נפתח בחלון חדש)"><b>5.0</b> <span class="rstars" aria-hidden="true">★★★★★</span> <span aria-hidden="true">·</span> 12 ביקורות בגוגל</a>
     <div class="tone">
       <div class="tc"><span class="stars" role="img" aria-label="5 כוכבים">★★★★★</span><p>"אנו שמחים להמליץ בחום על חברת לבונה גינון, המלווה אותנו באופן שוטף כבר למעלה מ-7 שנים. לאורך כל שנות העבודה המשותפות, הצוות של לבונה גינון מפגין מקצועיות חסרת פשרות, אמינות ורמת ביצוע גבוהה ביותר. מעבר לתוצאות המרשימות בשטח, מה שמייחד אותם באמת הוא השירות המהיר, הזמינות הגבוהה לכל פנייה והיחס האישי, האדיב והמכבד שהם מעניקים לכלל העובדים שלנו. תענוג לעבוד עם ספק שירות שלוקח אחריות מלאה ופשוט אפשר לסמוך עליו בעיניים עצומות. מומלץ בחום!"</p><div class="who"><i aria-hidden="true">R</i><span><b>Rotem Erman</b>HiBob · ביקורת בגוגל</span></div></div>
+      <div class="tc"><span class="stars" role="img" aria-label="5 כוכבים">★★★★★</span><p>"השירות הכי הכי 💚💚💚 המשרד מתוקתק והלב רגוע"</p><div class="who"><i aria-hidden="true">G</i><span><b>Gon Sela</b>ביקורת בגוגל</span></div></div>
     </div>
   </div>
 </section>
