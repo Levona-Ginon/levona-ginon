@@ -1248,8 +1248,8 @@
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 999;
-                background: var(--gold);
-                color: var(--text-dark);
+                background: var(--green-mid);
+                color: #fff;
                 font-weight: 700;
                 font-size: 1rem;
                 padding: 14px 26px;
@@ -1259,7 +1259,8 @@
                 white-space: nowrap;
                 transition: opacity 0.3s;
             }
-            .quote-sticky.hidden-near-form {
+            .quote-sticky.hidden-near-form,
+            .quote-sticky.hidden-at-top {
                 opacity: 0;
                 pointer-events: none;
             }
@@ -2245,6 +2246,12 @@
                 new IntersectionObserver(function (entries) {
                     sticky.classList.toggle('hidden-near-form', entries[0].isIntersecting);
                 }).observe(contact);
+            }
+            const heroCta = document.querySelector('.hero-cta');
+            if (sticky && heroCta && 'IntersectionObserver' in window) {
+                new IntersectionObserver(function (entries) {
+                    sticky.classList.toggle('hidden-at-top', entries[0].isIntersecting);
+                }).observe(heroCta);
             }
         })();
     </script>
