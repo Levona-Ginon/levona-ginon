@@ -2,6 +2,9 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-691EMG1S7Q"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-691EMG1S7Q');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>לבונה גינון ונוי | צמחייה למשרדים ואחזקה שוטפת</title>
     <meta name="description" content="לבונה גינון ונוי: צמחיית פנים למשרדים, אחזקה שוטפת, הידרופוניקה, מרפסות וגגות ירוקים. מעל 15 שנות ניסיון, שירות מחיפה ועד אשדוד ולקוחות כמו Unity, HiBob ו-Similarweb. השאירו פרטים להצעת מחיר.">
@@ -2207,7 +2210,7 @@
                         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                         body: JSON.stringify(Object.assign({ access_key: k }, data))
                     }).then(r => r.json()).catch(() => ({ success: false }))));
-                    if (results.some(r => r.success)) {
+                    if (results.some(r => r.success)) { if (window.gtag) gtag('event', 'generate_lead', { form_location: 'home' });
                         status.className = 'form-status ok';
                         status.textContent = 'תודה! הפנייה התקבלה ונחזור אליכם בהקדם.';
                         form.reset();

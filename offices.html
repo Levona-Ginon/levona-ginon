@@ -2,6 +2,9 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-691EMG1S7Q"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-691EMG1S7Q');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>צמחייה למשרדים | תכנון, הקמה וטיפול שבועי | לבונה גינון</title>
 <meta name="description" content="צמחיית פנים למשרדים וחברות: תכנון לפי האור והמיזוג, הקמה, וביקור טיפול קבוע כל שבוע. מעל 15 שנה, מחיפה ועד אשדוד. השאירו פרטים להצעת מחיר.">
@@ -365,7 +368,7 @@ body.at-top .sticky{visibility:hidden}
     if(form.email.value)data.replyto=form.email.value;
     try{
       var r=await Promise.all(KEYS.map(function(k){return fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.assign({access_key:k},data))}).then(function(x){return x.json()}).catch(function(){return{success:false}})}));
-      if(r.some(function(x){return x.success})){st.className='full status ok';st.textContent='תודה! קיבלנו את הפנייה ונחזור אליכם בהקדם.';form.reset();}else throw 0;
+      if(r.some(function(x){return x.success})){if(window.gtag)gtag('event','generate_lead',{form_location:'offices'});st.className='full status ok';st.textContent='תודה! קיבלנו את הפנייה ונחזור אליכם בהקדם.';form.reset();}else throw 0;
     }catch(err){st.className='full status err';st.textContent='משהו השתבש. אפשר להתקשר ל-052-5555846 או לכתוב בוואטסאפ.';}
     finally{btn.disabled=false;}
   });
